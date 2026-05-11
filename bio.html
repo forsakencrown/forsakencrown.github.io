@@ -18,6 +18,44 @@ body {
   color: #e8f2e8;
 }
 
+
+  /* Stats Column Layout */
+.stats-column {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: rgba(83,113,81,0.12);
+  padding: 20px 24px;
+  border-radius: 12px;
+  border: 1px solid rgba(215,235,215,0.25);
+  box-shadow:
+    inset 0 0 10px rgba(0,0,0,0.35),
+    0 0 12px rgba(0,0,0,0.45);
+  backdrop-filter: blur(2px);
+}
+
+.stat-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-label {
+  color: #6b8a63;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+.stat-value {
+  color: #e8f2e8;
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+
 /* Wrapper */
 .bio-wrapper {
   width: 100%;
@@ -144,15 +182,106 @@ body {
   <!-- Floating top image -->
   <img src="YOUR-TOP-IMAGE-URL-HERE" class="bio-top-img" alt="Character Image">
 
-  <!-- Stats table -->
-  <table class="stats-table">
-    <tr><td class="stats-label">NAME</td><td>Your text here</td></tr>
-    <tr><td class="stats-label">AGE</td><td>Your text here</td></tr>
-    <tr><td class="stats-label">PRONOUNS</td><td>Your text here</td></tr>
-    <tr><td class="stats-label">SPECIES</td><td>Your text here</td></tr>
-    <tr><td class="stats-label">ALIGNMENT</td><td>Your text here</td></tr>
-    <tr><td class="stats-label">OCCUPATION</td><td>Your text here</td></tr>
-  </table>
+<!-- Stats Column -->
+<div class="stats-column">
+
+  <div class="stat-row">
+    <span class="stat-label">NAME</span>
+    <span class="stat-value">Theodore Oliver Atwell</span>
+  </div>
+
+  <div class="stat-row">
+    <span class="stat-label">REAL NAME</span>
+    <span class="stat-value">Anderl Oliver Moreland</span>
+  </div>
+
+  <div class="stat-row">
+    <span class="stat-label">NICKNAMES</span>
+    <span class="stat-value">Theo, Oli, HRH</span>
+  </div>
+
+  <div class="stat-row">
+    <span class="stat-label">BIRTHDAY</span>
+    <span class="stat-value">TBA</span>
+  </div>
+
+  <div class="stat-row">
+    <span class="stat-label">GENDER</span>
+    <span class="stat-value">Cis Male</span>
+  </div>
+
+  <div class="stat-row">
+    <span class="stat-label">PRONOUNS</span>
+    <span class="stat-value">He/Him</span>
+  </div>
+
+  <div class="stat-row">
+    <span class="stat-label">ORIENTATION</span>
+    <span class="stat-value">Bisexual</span>
+  </div>
+
+  <div class="stat-row">
+    <span class="stat-label">SPECIES</span>
+    <span class="stat-value">Warlock</span>
+  </div>
+
+  <div class="stat-row">
+    <span class="stat-label">BIRTHPLACE</span>
+    <span class="stat-value">Mirenion</span>
+  </div>
+
+  <div class="stat-row">
+    <span class="stat-label">PARENTS</span>
+    <span class="stat-value">Ainel Moreland & Eulalia Wyck</span>
+  </div>
+
+  <div class="stat-row">
+    <span class="stat-label">SIBLINGS</span>
+    <span class="stat-value">Gracelyn Moreland</span>
+  </div>
+
+  <div class="stat-row">
+    <span class="stat-label">PARTNER(S)</span>
+    <span class="stat-value">Anderl Oliver Moreland</span>
+  </div>
+
+  <div class="stat-row">
+    <span class="stat-label">HAIR COLOR</span>
+    <span class="stat-value">Born blonde (dyes brownish)</span>
+  </div>
+
+  <div class="stat-row">
+    <span class="stat-label">EYE COLOR</span>
+    <span class="stat-value">Hazel</span>
+  </div>
+
+  <div class="stat-row">
+    <span class="stat-label">HEIGHT</span>
+    <span class="stat-value">6'0"</span>
+  </div>
+
+  <div class="stat-row">
+    <span class="stat-label">MENTAL & DISABILITIES</span>
+    <span class="stat-value">Anxiety, ADHD, Depression, Asthma, Hypoglycemic, Needs glasses, Chronic migraines</span>
+  </div>
+
+  <div class="stat-row">
+    <span class="stat-label">ALLERGIES</span>
+    <span class="stat-value">Peaches, Penicillin</span>
+  </div>
+
+  <div class="stat-row">
+    <span class="stat-label">MBTI</span>
+    <span class="stat-value">TBA</span>
+  </div>
+
+  <div class="stat-row">
+    <span class="stat-label">ENNEAGRAM</span>
+    <span class="stat-value">TBA</span>
+  </div>
+
+</div>
+
 
   <!-- Spotify playlist -->
   <div class="spotify-wrapper">
