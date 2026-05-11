@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<link rel="icon" href="https://i.postimg.cc/4xWLj9nt/dsah.png" sizes="32x32">
+<link rel="icon" href="https://i.postimg.cc/4xWLj9nt/dsah.png" sizes="64x64">
+
+<meta charset="UTF-8">
+<title>Forsaken Crown • Connections</title>
+
+<style>
+
+body {
+  background: #272727;
+  margin: 0;
+  padding: 0;
+  font-family: "Cormorant Garamond", serif;
+  color: #e8f2e8;
+}
+
+/* Wrapper */
+.connections-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  gap: 40px;
+}
+
+/* Floating animation */
+@keyframes softFloat {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+/* Title */
+.connections-title {
+  font-size: 3rem;
+  letter-spacing: 3px;
+  color: #e8f2e8;
+  font-family: "Cinzel Decorative", serif;
+  animation: softFloat 5s ease-in-out infinite;
+  text-shadow: 0 0 12px rgba(215,235,215,0.45);
+}
+
+/* Grid layout */
+.connections-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* Card */
+.connection-card {
+  background: rgba(83,113,81,0.12);
+  border: 1px solid rgba(215,235,215,0.25);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow:
+    inset 0 0 10px rgba(0,0,0,0.35),
+    0 0 12px rgba(0,0,0,0.45);
+  backdrop-filter: blur(2px);
+  transition: transform 0.3s ease;
+}
+
+.connection-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Banner image */
+.connection-banner {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  display: block;
+}
+
+.connection-name {
+  background: #6b8a63;
+  color: #e8f2e8;
+  font-weight: 700;
+  text-align: center;
+  padding: 6px 0;
+  letter-spacing: 1px;
+  font-size: 1rem;
+}
+
+
+/* Description */
+.connection-info {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #d9e6d9;
+  padding: 8px 0 12px;
+}
+
+.connection-info i {
+  font-style: italic;
+  color: #b9cbb9;
+}
+
+/* Mobile stacking */
+@media (max-width: 900px) {
+  .connections-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .connections-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Floating fox return button */
+.return-image {
+  width: 120px;
+  max-width: 40vw;
+  opacity: 0.9;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  animation: softFloat 5s ease-in-out infinite;
+}
+
+.return-image:hover {
+  transform: translateY(-8px) scale(1.05);
+}
+
+  /* UNIVERSAL MOBILE FIXES */
+@media (max-width: 700px) {
+
+  /* Reduce page padding */
+  .bio-wrapper,
+  .verses-wrapper,
+  .connections-wrapper,
+  .rules-wrapper {
+    padding: 20px 14px;
+    gap: 28px;
+  }
+
+  /* Make floating top images scale better */
+  .bio-top-img {
+    width: 90%;
+    max-width: none;
+  }
+
+  /* Make titles smaller but still magical */
+  .verses-title,
+  .connections-title,
+  .rules-title {
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+  }
+
+  /* Fix grids so they stack cleanly */
+  .image-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .connections-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .verses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Fix stat columns */
+  .stats-two-col {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .stat-row {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .stat-value {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  /* Fix connection banners */
+  .connection-banner {
+    height: 120px;
+    object-fit: cover;
+  }
+
+  /* Fix verse boxes */
+  .verse-box {
+    padding: 18px;
+  }
+
+  /* Make text more readable on small screens */
+  .verse-text,
+  .connection-info,
+  .bio-parchment {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+}
+
+
+</style>
+</head>
+
+<body>
+
+<div class="connections-wrapper">
+
+  <!-- Floating Title -->
+  <h1 class="connections-title">CONNECTIONS</h1>
+
+  <!-- Grid of character cards -->
+  <div class="connections-grid">
+
+    <div class="connection-card">
+      <img src="IMAGE1-URL-HERE" class="connection-banner" alt="Character Banner">
+      <div class="connection-name">URL</div>
+      <div class="connection-info">character / <i>by name.</i></div>
+    </div>
+
+    <div class="connection-card">
+      <img src="IMAGE2-URL-HERE" class="connection-banner" alt="Character Banner">
+      <div class="connection-name">URL</div>
+      <div class="connection-info">character / <i>by name.</i></div>
+    </div>
+
+    <div class="connection-card">
+      <img src="IMAGE3-URL-HERE" class="connection-banner" alt="Character Banner">
+      <div class="connection-name">URL</div>
+      <div class="connection-info">character / <i>by name.</i></div>
+    </div>
+
+    <div class="connection-card">
+      <img src="IMAGE4-URL-HERE" class="connection-banner" alt="Character Banner">
+      <div class="connection-name">URL</div>
+      <div class="connection-info">character / <i>by name.</i></div>
+    </div>
+
+    <div class="connection-card">
+      <img src="IMAGE5-URL-HERE" class="connection-banner" alt="Character Banner">
+      <div class="connection-name">URL</div>
+      <div class="connection-info">character / <i>by name.</i></div>
+    </div>
+
+    <div class="connection-card">
+      <img src="IMAGE6-URL-HERE" class="connection-banner" alt="Character Banner">
+      <div class="connection-name">URL</div>
+      <div class="connection-info">character / <i>by name.</i></div>
+    </div>
+
+    <div class="connection-card">
+      <img src="IMAGE7-URL-HERE" class="connection-banner" alt="Character Banner">
+      <div class="connection-name">URL</div>
+      <div class="connection-info">character / <i>by name.</i></div>
+    </div>
+
+    <div class="connection-card">
+      <img src="IMAGE8-URL-HERE" class="connection-banner" alt="Character Banner">
+      <div class="connection-name">URL</div>
+      <div class="connection-info">character / <i>by name.</i></div>
+    </div>
+
+  </div>
+
+  <!-- Floating fox return button -->
+  <a href="nav.html">
+    <img src="https://i.postimg.cc/0y0SH3dS/t-1.png" class="return-image" alt="Return">
+  </a>
+
+</div>
+
+</body>
+</html>
+
