@@ -1,10 +1,51 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Forsaken Crown</title>
-  </head>
-  <body>
-    <h1>Welcome to forsakencrown</h1>
-    <p>Site under construction ✨</p>
-  </body>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Forsaken Crown</title>
+
+<style>
+  body {
+    margin: 0;
+    background: #272727;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family: serif;
+  }
+
+  /* Floating animation */
+  @keyframes gentleFloat {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0); }
+  }
+
+  .book {
+    width: 260px;
+    max-width: 70vw;
+    animation: gentleFloat 4s ease-in-out infinite;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+  }
+
+  .book:hover {
+    transform: translateY(-18px);
+  }
+
+  a {
+    display: inline-block;
+  }
+</style>
+</head>
+
+<body>
+
+  <a href="nav.html">
+    <img src="YOUR-BOOK-IMAGE-URL-HERE" class="book" alt="Floating Book">
+  </a>
+
+</body>
 </html>
