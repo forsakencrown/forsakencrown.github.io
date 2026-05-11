@@ -4,7 +4,7 @@
 
 <link rel="icon" href="https://i.postimg.cc/4xWLj9nt/dsah.png" sizes="32x32">
 <link rel="icon" href="https://i.postimg.cc/4xWLj9nt/dsah.png" sizes="64x64">
-  
+
 <meta charset="UTF-8">
 <title>Forsaken Crown • Biography</title>
 
@@ -18,6 +18,33 @@ body {
   color: #e8f2e8;
 }
 
+/* Wrapper */
+.bio-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  gap: 40px;
+}
+
+/* Floating animation */
+@keyframes softFloat {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+/* Floating top image */
+.bio-top-img {
+  width: 45%;
+  max-width: 450px;
+  border-radius: 10px;
+  animation: softFloat 5s ease-in-out infinite;
+  opacity: 0.95;
+}
 
 /* Two-column stats layout */
 .stats-two-col {
@@ -46,6 +73,8 @@ body {
   display: flex;
   justify-content: space-between;
   gap: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(215,235,215,0.15); /* faint line */
 }
 
 .stat-label {
@@ -79,64 +108,6 @@ body {
   }
 }
 
-
-/* Wrapper */
-.bio-wrapper {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px 20px;
-  box-sizing: border-box;
-  gap: 40px;
-}
-
-/* Floating animation */
-@keyframes softFloat {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-  100% { transform: translateY(0); }
-}
-
-/* Floating top image */
-.bio-top-img {
-  width: 45%;
-  max-width: 450px;
-  border-radius: 10px;
-  animation: softFloat 5s ease-in-out infinite;
-  opacity: 0.95;
-}
-
-/* Stats table */
-.stats-table {
-  width: 100%;
-  max-width: 600px;
-  border-collapse: collapse;
-  background: rgba(83,113,81,0.15);
-  border: 1px solid rgba(215,235,215,0.25);
-  border-radius: 10px;
-  overflow: hidden;
-  backdrop-filter: blur(2px);
-}
-
-.stats-table td {
-  padding: 12px 16px;
-  border-bottom: 1px solid rgba(215,235,215,0.15);
-  font-size: 1.05rem;
-}
-
-.stats-table tr:last-child td {
-  border-bottom: none;
-}
-
-.stats-label {
-  color: #6b8a63;
-  font-weight: 700;
-  letter-spacing: 1px;
-  width: 30%;
-}
-
 /* Spotify embed */
 .spotify-wrapper {
   width: 100%;
@@ -144,7 +115,6 @@ body {
   margin-top: 10px;
 }
 
-<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/62i6k24bn6lglfQqvYxpUu?utm_source=generator&theme=0" width="60%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 /* Aesthetic image grid */
 .image-grid {
   display: grid;
@@ -207,39 +177,37 @@ body {
   <!-- Floating top image -->
   <img src="YOUR-TOP-IMAGE-URL-HERE" class="bio-top-img" alt="Character Image">
 
-<!-- Two-Column Stats -->
-<div class="stats-two-col">
+  <!-- Two-Column Stats -->
+  <div class="stats-two-col">
 
-  <!-- Left Column -->
-  <div class="stats-col">
-    <div class="stat-row"><span class="stat-label">NAME</span><span class="stat-value">Theodore Oliver Atwell</span></div>
-    <div class="stat-row"><span class="stat-label">REAL NAME</span><span class="stat-value">Anderl Oliver Moreland</span></div>
-    <div class="stat-row"><span class="stat-label">NICKNAMES</span><span class="stat-value">Theo, Oli, HRH</span></div>
-    <div class="stat-row"><span class="stat-label">BIRTHDAY</span><span class="stat-value">June 10th</span></div>
-    <div class="stat-row"><span class="stat-label">GENDER</span><span class="stat-value">Cis Male</span></div>
-    <div class="stat-row"><span class="stat-label">PRONOUNS</span><span class="stat-value">He/Him</span></div>
-    <div class="stat-row"><span class="stat-label">ORIENTATION</span><span class="stat-value">Bisexual</span></div>
-    <div class="stat-row"><span class="stat-label">SPECIES</span><span class="stat-value">Warlock</span></div>
-    <div class="stat-row"><span class="stat-label">BIRTHPLACE</span><span class="stat-value">Mirenion</span></div>
-    <div class="stat-row"><span class="stat-label">PARENTS</span><span class="stat-value">Ainel Moreland & Eulalia Wyck</span></div>
+    <!-- Left Column -->
+    <div class="stats-col">
+      <div class="stat-row"><span class="stat-label">NAME</span><span class="stat-value">Theodore Oliver Atwell</span></div>
+      <div class="stat-row"><span class="stat-label">REAL NAME</span><span class="stat-value">Anderl Oliver Moreland</span></div>
+      <div class="stat-row"><span class="stat-label">NICKNAMES</span><span class="stat-value">Theo, Oli, HRH</span></div>
+      <div class="stat-row"><span class="stat-label">BIRTHDAY</span><span class="stat-value">June 10th</span></div>
+      <div class="stat-row"><span class="stat-label">GENDER</span><span class="stat-value">Cis Male</span></div>
+      <div class="stat-row"><span class="stat-label">PRONOUNS</span><span class="stat-value">He/Him</span></div>
+      <div class="stat-row"><span class="stat-label">ORIENTATION</span><span class="stat-value">Bisexual</span></div>
+      <div class="stat-row"><span class="stat-label">SPECIES</span><span class="stat-value">Warlock</span></div>
+      <div class="stat-row"><span class="stat-label">BIRTHPLACE</span><span class="stat-value">Mirenion</span></div>
+      <div class="stat-row"><span class="stat-label">PARENTS</span><span class="stat-value">Ainel Moreland & Eulalia Wyck</span></div>
+    </div>
+
+    <!-- Right Column -->
+    <div class="stats-col">
+      <div class="stat-row"><span class="stat-label">SIBLINGS</span><span class="stat-value">Gracelyn Moreland</span></div>
+      <div class="stat-row"><span class="stat-label">PARTNER(S)</span><span class="stat-value">Anderl Oliver Moreland</span></div>
+      <div class="stat-row"><span class="stat-label">HAIR COLOR</span><span class="stat-value">Born blonde (dyes brownish)</span></div>
+      <div class="stat-row"><span class="stat-label">EYE COLOR</span><span class="stat-value">Hazel</span></div>
+      <div class="stat-row"><span class="stat-label">HEIGHT</span><span class="stat-value">6'0"</span></div>
+      <div class="stat-row"><span class="stat-label">MENTAL & DISABILITIES</span><span class="stat-value">Anxiety, ADHD, Depression, Asthma, Hypoglycemic, Needs glasses, Chronic migraines</span></div>
+      <div class="stat-row"><span class="stat-label">ALLERGIES</span><span class="stat-value">Peaches, Penicillin</span></div>
+      <div class="stat-row"><span class="stat-label">MBTI</span><span class="stat-value">TBA</span></div>
+      <div class="stat-row"><span class="stat-label">ENNEAGRAM</span><span class="stat-value">TBA</span></div>
+    </div>
+
   </div>
-
-  <!-- Right Column -->
-  <div class="stats-col">
-    <div class="stat-row"><span class="stat-label">SIBLINGS</span><span class="stat-value">Gracelyn Moreland</span></div>
-    <div class="stat-row"><span class="stat-label">PARTNER(S)</span><span class="stat-value">Anderl Oliver Moreland</span></div>
-    <div class="stat-row"><span class="stat-label">HAIR COLOR</span><span class="stat-value">Born blonde (dyes brownish)</span></div>
-    <div class="stat-row"><span class="stat-label">EYE COLOR</span><span class="stat-value">Hazel</span></div>
-    <div class="stat-row"><span class="stat-label">HEIGHT</span><span class="stat-value">6'0"</span></div>
-    <div class="stat-row"><span class="stat-label">MENTAL & DISABILITIES</span><span class="stat-value">Anxiety, ADHD, Depression, Asthma, Hypoglycemic, Needs glasses, Chronic migraines</span></div>
-    <div class="stat-row"><span class="stat-label">ALLERGIES</span><span class="stat-value">Peaches, Penicillin</span></div>
-    <div class="stat-row"><span class="stat-label">MBTI</span><span class="stat-value">TBA</span></div>
-    <div class="stat-row"><span class="stat-label">ENNEAGRAM</span><span class="stat-value">TBA</span></div>
-  </div>
-
-</div>
-
-
 
   <!-- Spotify playlist -->
   <div class="spotify-wrapper">
@@ -270,4 +238,3 @@ body {
 
 </body>
 </html>
-
