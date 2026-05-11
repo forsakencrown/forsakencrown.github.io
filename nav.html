@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Navigation • Forsaken Crown</title>
+<title>Forsaken Crown • Navigation</title>
 
 <style>
   body {
@@ -13,68 +13,72 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 80px;
+    padding-top: 60px;
   }
 
-  h1 {
-    color: #6b8a63;
-    font-size: 2.4rem;
+  /* Floating animation */
+  @keyframes gentleFloat {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
+
+  .top-image {
+    width: 180px;
+    animation: gentleFloat 4s ease-in-out infinite;
     margin-bottom: 40px;
-    letter-spacing: 1px;
   }
 
-  .nav-container {
-    display: flex;
-    flex-direction: column;
+  .nav-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     width: 90%;
-    max-width: 400px;
+    max-width: 500px;
   }
 
   .nav-button {
-    background: #272727;
-    border: 2px solid #537151;
-    color: #e8e8e8;
-    padding: 14px 20px;
+    background: #537151;
+    color: #ffffff;
+    padding: 16px;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-decoration: none;
     border-radius: 10px;
+    box-shadow: 0 0 12px #6b8a63;
     transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
   }
 
   .nav-button:hover {
-    background: #537151;
-    color: #ffffff;
     transform: translateY(-6px);
+    box-shadow: 0 0 18px #8fbf7a;
   }
 
-  .back {
-    margin-top: 40px;
-    font-size: 1rem;
-    color: #6b8a63;
-    text-decoration: none;
-    transition: 0.3s;
-  }
-
-  .back:hover {
-    color: #8fbf7a;
+  .rune {
+    font-size: 1.4rem;
+    opacity: 0.9;
   }
 </style>
 </head>
 
 <body>
 
-  <h1>Navigation</h1>
+  <!-- Floating image at the top -->
+  <img src="YOUR-FLOATING-IMAGE-URL-HERE" class="top-image" alt="Rune Crest">
 
-  <div class="nav-container">
-    <a href="blog.html" class="nav-button">Blog</a>
-    <a href="rules.html" class="nav-button">Rules</a>
-    <a href="muses.html" class="nav-button">Muses</a>
-    <a href="mains.html" class="nav-button">Mains</a>
+  <div class="nav-grid">
+    <a href="blog.html" class="nav-button"><span class="rune">ᚠ</span>Blog</a>
+    <a href="rules.html" class="nav-button"><span class="rune">ᚢ</span>Rules</a>
+    <a href="muses.html" class="nav-button"><span class="rune">ᚦ</span>Muses</a>
+    <a href="mains.html" class="nav-button"><span class="rune">ᚨ</span>Mains</a>
+    <a href="about.html" class="nav-button"><span class="rune">ᚱ</span>About</a>
+    <a href="lore.html" class="nav-button"><span class="rune">ᚲ</span>Lore</a>
+    <a href="ocs.html" class="nav-button"><span class="rune">ᚷ</span>OCs</a>
+    <a href="links.html" class="nav-button"><span class="rune">ᚹ</span>Links</a>
   </div>
-
-  <a href="index.html" class="back">← Return to the Book</a>
 
 </body>
 </html>
