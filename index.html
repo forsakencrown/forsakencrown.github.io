@@ -41,6 +41,83 @@
   a {
     display: inline-block;
   }
+
+  /* UNIVERSAL MOBILE FIXES */
+@media (max-width: 700px) {
+
+  /* Reduce page padding */
+  .bio-wrapper,
+  .verses-wrapper,
+  .connections-wrapper,
+  .rules-wrapper {
+    padding: 20px 14px;
+    gap: 28px;
+  }
+
+  /* Make floating top images scale better */
+  .bio-top-img {
+    width: 90%;
+    max-width: none;
+  }
+
+  /* Make titles smaller but still magical */
+  .verses-title,
+  .connections-title,
+  .rules-title {
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+  }
+
+  /* Fix grids so they stack cleanly */
+  .image-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .connections-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .verses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Fix stat columns */
+  .stats-two-col {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .stat-row {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .stat-value {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  /* Fix connection banners */
+  .connection-banner {
+    height: 120px;
+    object-fit: cover;
+  }
+
+  /* Fix verse boxes */
+  .verse-box {
+    padding: 18px;
+  }
+
+  /* Make text more readable on small screens */
+  .verse-text,
+  .connection-info,
+  .bio-parchment {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+}
+
 </style>
 </head>
 
