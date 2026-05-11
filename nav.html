@@ -6,94 +6,168 @@
 
 <style>
   body {
-    margin: 0;
     background: #272727;
-    color: #e8e8e8;
-    font-family: serif;
+    margin: 0;
+    padding: 0;
+    font-family: "Cormorant Garamond", serif;
+  }
+
+  .nav-wrapper {
+    width: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     padding: 40px 20px;
+    gap: 30px;
+    box-sizing: border-box;
   }
 
-  /* Header image */
-  .header-img {
-    width: 90%;
-    max-width: 600px;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    animation: gentleFloat 4s ease-in-out infinite;
-  }
-
-  /* Floating animation */
-  @keyframes gentleFloat {
+  /* Floating banner animation */
+  @keyframes floatBanner {
     0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+    50% { transform: translateY(-8px); }
     100% { transform: translateY(0); }
   }
 
-  /* Description block */
-  .desc {
-    max-width: 600px;
-    text-align: center;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 40px;
-    color: #dcdcdc;
+  .nav-banner {
+    width: 45%;
+    max-width: 450px;
+    border-radius: 10px;
+    animation: floatBanner 5s ease-in-out infinite;
+    opacity: 0.95;
+    display: block;
+    margin: 0 auto;
   }
 
-  /* Button grid */
-  .nav-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-    width: 100%;
+  .nav-description {
     max-width: 700px;
+    color: #d9e6d9;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    text-align: justify;
+    text-align-last: center;
   }
 
-  /* Buttons */
-  .nav-button {
-    background: #537151;
-    color: #ffffff;
-    padding: 14px 10px;
-    text-align: center;
-    font-size: 1rem;
+  /* Two-column layout centered */
+  .nav-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 18px;
+    width: 100%;
+    max-width: 550px;
+    justify-items: center;
+  }
+
+  /* Magical shimmer animation */
+  @keyframes shimmer {
+    0% { opacity: 0.15; }
+    50% { opacity: 0.35; }
+    100% { opacity: 0.15; }
+  }
+
+  /* Click flash */
+  @keyframes spellFlash {
+    0% { box-shadow: 0 0 0 rgba(215,235,215,0); }
+    50% { box-shadow: 0 0 18px rgba(215,235,215,0.55); }
+    100% { box-shadow: 0 0 0 rgba(215,235,215,0); }
+  }
+
+  .nav-buttons a {
+    position: relative;
+    padding: 10px 16px;
+    background: linear-gradient(145deg, #3f5a3f, #537151);
+    color: #e8f2e8;
     text-decoration: none;
-    border-radius: 8px;
-    box-shadow: 0 0 12px #6b8a63;
-    transition: all 0.3s ease;
+    border-radius: 10px;
+
+    box-shadow:
+      inset 0 0 6px rgba(0,0,0,0.45),
+      inset 0 0 2px rgba(255,255,255,0.15),
+      0 2px 4px rgba(0,0,0,0.45);
+
+    border: 1px solid rgba(215, 235, 215, 0.25);
+
+    font-size: 0.95rem;
+    letter-spacing: 1.3px;
+
+    transition: transform 0.25s ease, background 0.25s ease;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
   }
 
-  .nav-button:hover {
+  /* Larger, more visible runes with shimmer */
+  .nav-buttons a::before {
+    content: attr(data-rune);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    opacity: 0.32;
+    color: #e4f0e4;
+    pointer-events: none;
+    filter: blur(0.4px);
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  /* Hover glow */
+  .nav-buttons a:hover {
+    background: linear-gradient(145deg, #537151, #6b8a63);
     transform: translateY(-6px);
-    box-shadow: 0 0 18px #8fbf7a;
+    box-shadow:
+      inset 0 0 10px rgba(0,0,0,0.35),
+      0 5px 10px rgba(0,0,0,0.55);
+  }
+
+  /* Click flash */
+  .nav-buttons a:active {
+    animation: spellFlash 0.45s ease-out;
+  }
+
+  @media (max-width: 600px) {
+    .nav-banner {
+      width: 80%;
+    }
+    .nav-buttons {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
 </head>
 
 <body>
 
-  <!-- Header image -->
-  <img src="YOUR-HEADER-IMAGE-URL-HERE" class="header-img" alt="Forsaken Crown Header">
+<div class="nav-wrapper">
 
-  <!-- Description -->
-  <div class="desc">
-    AN INDIE THEODORE ATWELL, AN ORIGINAL CHARACTER OF ORIGINAL LORE.<br>
-    LOVINGLY CRAFTED BY BELLE.<br>
-    THIS BLOG WILL ONLY WRITE WITH THOSE 21+.
+  <!-- Floating top banner -->
+  <img 
+    src="https://i.postimg.cc/mrKDgyTj/promo-2.png"
+    alt="Banner"
+    class="nav-banner"
+  >
+
+  <div class="nav-description">
+    AN INDIE <b>THEODORE ATWELL</b>, AN <i>ORIGINAL CHARACTER</i> OF <i>ORIGINAL LORE</i>.
+    <br>LOVINGLY CRAFTED BY BELLE. THIS BLOG WILL ONLY WRITE WITH THOSE 21+.
   </div>
 
-  <!-- Button grid -->
-  <div class="nav-grid">
-    <a href="blog.html" class="nav-button">Blog</a>
-    <a href="codex.html" class="nav-button">Codex</a>
-    <a href="biography.html" class="nav-button">Biography</a>
-    <a href="timelines.html" class="nav-button">Timelines</a>
-    <a href="connections.html" class="nav-button">Connections</a>
-    <a href="memes.html" class="nav-button">Memes</a>
-    <a href="wishlist.html" class="nav-button">Wishlist</a>
-    <a href="headcanon.html" class="nav-button">Headcanon</a>
+  <!-- Two-column rune spell tabs -->
+  <div class="nav-buttons">
+    <a href="blog.html" data-rune="ᚠ">BLOG</a>
+    <a href="codex.html" data-rune="ᛃ">CODEX</a>
+    <a href="biography.html" data-rune="ᚱ">BIOGRAPHY</a>
+    <a href="timelines.html" data-rune="ᛇ">TIMELINES</a>
+    <a href="connections.html" data-rune="ᚹ">CONNECTIONS</a>
+    <a href="memes.html" data-rune="ᛞ">MEMES</a>
+    <a href="wishlist.html" data-rune="ᚾ">WISHLIST</a>
+    <a href="headcanon.html" data-rune="ᛉ">HEADCANON</a>
   </div>
+
+</div>
 
 </body>
 </html>
