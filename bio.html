@@ -1,1 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<link rel="icon" href="https://i.postimg.cc/4xWLj9nt/dsah.png" sizes="32x32">
+<link rel="icon" href="https://i.postimg.cc/4xWLj9nt/dsah.png" sizes="64x64">
+  
+<meta charset="UTF-8">
+<title>Forsaken Crown • Biography</title>
+
+<style>
+
+body {
+  background: #272727;
+  margin: 0;
+  padding: 0;
+  font-family: "Cormorant Garamond", serif;
+  color: #e8f2e8;
+}
+
+/* Wrapper */
+.bio-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  gap: 40px;
+}
+
+/* Floating animation */
+@keyframes softFloat {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+/* Floating top image */
+.bio-top-img {
+  width: 45%;
+  max-width: 450px;
+  border-radius: 10px;
+  animation: softFloat 5s ease-in-out infinite;
+  opacity: 0.95;
+}
+
+/* Stats table */
+.stats-table {
+  width: 100%;
+  max-width: 600px;
+  border-collapse: collapse;
+  background: rgba(83,113,81,0.15);
+  border: 1px solid rgba(215,235,215,0.25);
+  border-radius: 10px;
+  overflow: hidden;
+  backdrop-filter: blur(2px);
+}
+
+.stats-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(215,235,215,0.15);
+  font-size: 1.05rem;
+}
+
+.stats-table tr:last-child td {
+  border-bottom: none;
+}
+
+.stats-label {
+  color: #6b8a63;
+  font-weight: 700;
+  letter-spacing: 1px;
+  width: 30%;
+}
+
+/* Spotify embed */
+.spotify-wrapper {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 10px;
+}
+
+/* Aesthetic image grid */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.image-grid img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.45);
+  transition: transform 0.3s ease;
+}
+
+.image-grid img:hover {
+  transform: translateY(-6px);
+}
+
+/* Biography parchment section */
+.bio-parchment {
+  max-width: 750px;
+  background: linear-gradient(145deg, #2f2f2f, #3a3a3a);
+  padding: 30px 24px;
+  border-radius: 12px;
+  box-shadow:
+    inset 0 0 12px rgba(0,0,0,0.45),
+    0 0 14px rgba(0,0,0,0.55);
+  border: 1px solid rgba(215,235,215,0.25);
+  line-height: 1.7;
+  font-size: 1.05rem;
+  text-align: justify;
+  text-align-last: left;
+}
+
+/* Floating fox return button */
+.return-image {
+  width: 120px;
+  max-width: 40vw;
+  opacity: 0.9;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  animation: softFloat 5s ease-in-out infinite;
+}
+
+.return-image:hover {
+  transform: translateY(-8px) scale(1.05);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bio-wrapper">
+
+  <!-- Floating top image -->
+  <img src="YOUR-TOP-IMAGE-URL-HERE" class="bio-top-img" alt="Character Image">
+
+  <!-- Stats table -->
+  <table class="stats-table">
+    <tr><td class="stats-label">NAME</td><td>Your text here</td></tr>
+    <tr><td class="stats-label">AGE</td><td>Your text here</td></tr>
+    <tr><td class="stats-label">PRONOUNS</td><td>Your text here</td></tr>
+    <tr><td class="stats-label">SPECIES</td><td>Your text here</td></tr>
+    <tr><td class="stats-label">ALIGNMENT</td><td>Your text here</td></tr>
+    <tr><td class="stats-label">OCCUPATION</td><td>Your text here</td></tr>
+  </table>
+
+  <!-- Spotify playlist -->
+  <div class="spotify-wrapper">
+    <iframe style="border-radius:12px" src="YOUR-SPOTIFY-EMBED-LINK-HERE" width="100%" height="152" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+  </div>
+
+  <!-- Aesthetic image grid -->
+  <div class="image-grid">
+    <img src="IMAGE1-URL-HERE">
+    <img src="IMAGE2-URL-HERE">
+    <img src="IMAGE3-URL-HERE">
+    <img src="IMAGE4-URL-HERE">
+    <img src="IMAGE5-URL-HERE">
+    <img src="IMAGE6-URL-HERE">
+  </div>
+
+  <!-- Biography parchment -->
+  <div class="bio-parchment">
+    Your biography text goes here. Write as much as you want — this section expands naturally and keeps the spellbook aesthetic.
+  </div>
+
+  <!-- Floating fox return button -->
+  <a href="nav.html">
+    <img src="https://i.postimg.cc/0y0SH3dS/t-1.png" class="return-image" alt="Return">
+  </a>
+
+</div>
+
+</body>
+</html>
 
